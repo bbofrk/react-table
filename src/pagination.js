@@ -149,7 +149,7 @@ export default class ReactTablePagination extends Component {
               this.changePage(pages - 1)
             }}
           >
-            {Last Page}
+            Last Page
           </NextComponent>
         </div>
       </div>
