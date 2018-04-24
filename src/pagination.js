@@ -72,6 +72,15 @@ export default class ReactTablePagination extends Component {
         <div className="-previous">
           <PreviousComponent
             onClick={() => {
+              this.changePage(1);
+            }}
+          >
+            First Page
+          </PreviousComponent>
+        </div>
+        <div className="-previous">
+          <PreviousComponent
+            onClick={() => {
               if (!canPrevious) return
               this.changePage(page - 1)
             }}
@@ -131,6 +140,16 @@ export default class ReactTablePagination extends Component {
             disabled={!canNext}
           >
             {this.props.nextText}
+          </NextComponent>
+        </div>
+        <div className="-next">
+          <NextComponent
+            onClick={() => {
+              if (!canNext) return
+              this.changePage(pages - 1)
+            }}
+          >
+            {Last Page}
           </NextComponent>
         </div>
       </div>
